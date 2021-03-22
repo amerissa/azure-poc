@@ -211,6 +211,11 @@
                                                         "id": "[variables('lbPoolID')]"
                                                     }
                                                 ],
+                                                "networkSecurityGroups": [
+    {
+        "id": "/subscriptions/c2b0499e-d184-4762-ab46-69e7d49f4c4b/resourceGroups/cibc/providers/Microsoft.Network/networkSecurityGroups/cibc"
+    }
+],
                                                 "loadBalancerInboundNatPools": [
                                                     {
                                                         "id": "[resourceId('Microsoft.Network/loadBalancers/inboundNatPools', variables('loadBalancerName'),  variables('natPoolName'))]"
@@ -242,9 +247,9 @@
                                           "https://raw.githubusercontent.com/amerissa/azure-poc/master/secrets.json",
                                           "https://raw.githubusercontent.com/amerissa/azure-poc/master/SilentInstaller.py",
                                           "https://downloads.tableau.com/esdalt/2020.4.2/TableauServer-64bit-2020-4-2.exe"
-                                        ],
-                                        "commandToExecute" :  "powershell.exe ./installtableau.ps1"
-                                        }
+                                        ]
+                                      },
+                                        "commandToExecute" :  "powershell -executionpolicy bypass -File installtableau.ps1"
                                     }
                                 }
                             }
