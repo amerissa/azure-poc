@@ -230,20 +230,19 @@
                                 "properties": {
                                   "publisher": "Microsoft.Compute",
                                   "type": "CustomScriptExtension",
-                                  "typeHandlerVersion": "1.9",
+                                  "typeHandlerVersion": "1.10",
                                     "autoUpgradeMinorVersion": true,
                                     "forceUpdateTag": "[parameters('powershelldscUpdateTagVersion')]",
                                     "settings": {
-                                        "configuration": {
                                           "fileUris": [
                                           "https://raw.githubusercontent.com/amerissa/azure-poc/master/installtableau.ps1",
                                           "https://raw.githubusercontent.com/amerissa/azure-poc/master/registration.json",
                                           "https://raw.githubusercontent.com/amerissa/azure-poc/master/config.json",
                                           "https://raw.githubusercontent.com/amerissa/azure-poc/master/secrets.json",
                                           "https://raw.githubusercontent.com/amerissa/azure-poc/master/SilentInstaller.py",
-                                          "https://downloads.tableau.com/esdalt/2020.4.2/TableauServer-64bit-2020-4-2.exe"
-                                        ]
-                                      },
+                                          "https://downloads.tableau.com/esdalt/2020.4.2/TableauServer-64bit-2020-4-2.exe",
+                                          "https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe"
+                                        ],
                                         "commandToExecute" :  "powershell -ExecutionPolicy Unrestricted -executionpolicy bypass -File installtableau.ps1"
                                     }
                                 }
