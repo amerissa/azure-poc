@@ -59,8 +59,8 @@
         }
     },
     "variables": {
-        "namingInfix": "[toLower(substring(concat('cibcdemo', uniqueString(resourceGroup().id)), 0, 9))]",
-        "longNamingInfix": "[toLower('cibcdemo')]",
+        "namingInfix": "[toLower(substring(concat('cibcdemo1', uniqueString(resourceGroup().id)), 0, 9))]",
+        "longNamingInfix": "[toLower('cibcdemo1')]",
         "addressPrefix": "10.0.0.0/16",
         "subnetPrefix": "10.0.0.0/24",
         "virtualNetworkName": "[concat(variables('namingInfix'), 'vnet')]",
@@ -211,12 +211,7 @@
                                                         "id": "[variables('lbPoolID')]"
                                                     }
                                                 ],
-                                                "networkSecurityGroups": [
-    {
-        "id": "/subscriptions/c2b0499e-d184-4762-ab46-69e7d49f4c4b/resourceGroups/cibc/providers/Microsoft.Network/networkSecurityGroups/cibc"
-    }
-],
-                                                "loadBalancerInboundNatPools": [
+                                            "loadBalancerInboundNatPools": [
                                                     {
                                                         "id": "[resourceId('Microsoft.Network/loadBalancers/inboundNatPools', variables('loadBalancerName'),  variables('natPoolName'))]"
                                                     }
@@ -249,7 +244,7 @@
                                           "https://downloads.tableau.com/esdalt/2020.4.2/TableauServer-64bit-2020-4-2.exe"
                                         ]
                                       },
-                                        "commandToExecute" :  "powershell -executionpolicy bypass -File installtableau.ps1"
+                                        "commandToExecute" :  "powershell -ExecutionPolicy Unrestricted -executionpolicy bypass -File installtableau.ps1"
                                     }
                                 }
                             }

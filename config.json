@@ -9,7 +9,7 @@
          "port":80,
          "firewallOpeningEnabled":true,
          "sslRedirectEnabled":true,
-         "publicHost":"cibcdemo.canadacentral.cloudapp.azure.com",
+         "publicHost":"cibcdemo1.canadacentral.cloudapp.azure.com",
          "publicPort":80,
          "sslEnabled":false,
          "sslPort":443
