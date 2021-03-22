@@ -1,0 +1,10 @@
+- name: Deploy ARM template
+  shell: az deployment group create \
+    --name AnsibleDeployment \
+    --resource-group {{ resourceGroup }} \
+    --template-file scaleset-arm.json
+  register: deploy
+
+- name: Output
+  debug:
+    msg: "{{ deploy.stdout }}"

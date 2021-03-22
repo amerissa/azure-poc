@@ -1,0 +1,184 @@
+{
+   "configEntities":{
+      "runAsUser":{
+         "_type":"runAsUserType",
+         "name":"NT AUTHORITY\\NetworkService"
+      },
+      "gatewaySettings":{
+         "_type":"gatewaySettingsType",
+         "port":80,
+         "firewallOpeningEnabled":true,
+         "sslRedirectEnabled":true,
+         "publicHost":"cbicdemo.cloudified.ca",
+         "publicPort":80,
+         "sslEnabled":false,
+         "sslPort":443
+      },
+      "identityStore":{
+         "_type":"identityStoreType",
+         "type":"local",
+         "domain":"localdemo",
+         "nickname":"demo"
+      }
+   },
+    "topologyVersion":{
+        "nodes":{
+            "0": {
+                "services": {
+                    "filestore": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "tabadmincontroller": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+					"clientfileservice": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "dataserver": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            },
+                            {
+                            "instanceId":"1"
+                            }
+                        ]
+                    },
+                    "cacheserver": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            },
+                            {
+                            "instanceId":"1"
+                            }
+                        ]
+                    },
+                    "vizqlserver": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            },
+                            {
+                            "instanceId":"1"
+                            }
+                        ]
+                    },
+                    "backgrounder": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            },
+                            {
+                            "instanceId":"1"
+                            }
+                        ]
+                    },
+                    "appzookeeper": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "pgsql": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "dataengine": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "licenseservice": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "searchserver": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "clustercontroller": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "tabsvc": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "vizportal": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "tabadminagent": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "clientfileservice": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "activemqserver": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "elasticserver": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    },
+                    "gateway": {
+                        "instances":[
+                            {
+                            "instanceId":"0"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
